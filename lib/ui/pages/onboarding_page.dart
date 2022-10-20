@@ -29,7 +29,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightBackgroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -110,7 +109,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             const SizedBox(
                               height: 20,
                             ),
-                            CustomTextWidget(
+                            CustomTextButton(
                               title: 'Sign In',
                               onTap: () {
                                 Navigator.pushNamedAndRemoveUntil(

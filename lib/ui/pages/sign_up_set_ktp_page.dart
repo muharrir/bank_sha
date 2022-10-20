@@ -8,7 +8,6 @@ class SignUpSetKtpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightBackgroundColor,
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         children: [
@@ -93,7 +92,7 @@ class SignUpSetKtpPage extends StatelessWidget {
           const SizedBox(
             height: 60,
           ),
-          CustomTextWidget(
+          CustomTextButton(
             title: 'Skip for Now',
             onTap: () {
               Navigator.pushNamed(context, '/sign-up-success');

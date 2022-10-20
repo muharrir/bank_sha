@@ -40,11 +40,11 @@ class CustomFilledButton extends StatelessWidget {
   }
 }
 
-class CustomTextWidget extends StatelessWidget {
+class CustomTextButton extends StatelessWidget {
   final String title;
   final VoidCallback? onTap;
 
-  const CustomTextWidget({
+  const CustomTextButton({
     super.key,
     required this.title,
     this.onTap,
@@ -59,6 +59,41 @@ class CustomTextWidget extends StatelessWidget {
           title,
           style: darkGreyTextStyle.copyWith(
             fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomInputButton extends StatelessWidget {
+  final String title;
+  final VoidCallback? onTap;
+
+  const CustomInputButton({
+    super.key,
+    required this.title,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: numberBackgroundColor,
+        ),
+        child: Center(
+          child: Text(
+            title,
+            style: whiteTextStyle.copyWith(
+              fontSize: 22,
+              fontWeight: semiBold,
+            ),
           ),
         ),
       ),

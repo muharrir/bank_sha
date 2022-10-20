@@ -9,7 +9,6 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightBackgroundColor,
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         children: [
@@ -81,7 +80,7 @@ class SignInPage extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          CustomTextWidget(
+          CustomTextButton(
             title: 'Create New Account',
             onTap: () {
               Navigator.pushNamed(context, '/sign-up');
